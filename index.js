@@ -5,7 +5,7 @@ function start() {
 
     server.on('request', function (request, response) {
         response.setHeader('Content-Type', 'text/html; charset=utf-8');
-        if (request.method === 'GET' && request.url === '/diablo') {
+        if (request.method === 'GET' && request.url === '/') {
             fs.readFile('./index.html', function (err, html) {
                 if (err) {
                     throw err;
